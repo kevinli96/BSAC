@@ -23,6 +23,17 @@ body {
     -o-background-size: cover;
 }
 
+.no-indent {
+  text-indent: 0px;
+}
+
+.centered-table {
+    border-radius: 5px;
+    width: 50%;
+    margin: 0px auto;
+    float: none;
+}
+
 .brand-name {
     margin: 0;
     font-family: 'Patua One', cursive;

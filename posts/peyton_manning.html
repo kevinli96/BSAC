@@ -1,0 +1,579 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>BSAC - Posts</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:900|Oleo+Script+Swash+Caps:700|Patua+One" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div class="brand">BSAC</div>
+    <div class="address-bar">Brown Sports Analytics Club</div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="index.html">BSAC</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="page-scroll">
+                        <a href="../index.html#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="../posts.html">Posts</a>
+                    </li>
+                    <li>
+                        <a href="../workshops.html">Workshops</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="../index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <div class="container">
+
+        <div class="row" id="posts">
+            <div class="box">
+                <div class="col-lg-8 col-lg-offset-2">
+
+                    <h2 class="intro-text text-center">Is Peyton Manning a Playoff Quarterback?</h2>
+                    <hr />
+                    <div id="blog_post1">
+                        <h3 class="post-title">
+                            <i>Ajay Balaji, Victor Chang, Steven Liao</i>
+                          </h3>
+                          <h4 class="post-subtitle">
+                              Writeup by <i>Ajay Balaji and Steven Liao</i> on Sept. 14, 2017.
+                            </h4><br />
+                          <p class="no-indent">
+                              <b>TLDR</b>: Is Peyton Manning a regular season quarterback? We tested this by
+                              comparing Manning's average Passer Rating in the playoffs against Manning's
+                              average Passer Rating against playoff teams in the regular season.
+                              Performing a simple difference-in-means test, we found no significant
+                              drop-off in Manning's play against similar-level opponents in the
+                              postseason. We then used the same metric to compare Manning to several
+                              other quarterbacks (including Brady, Favre, Brees).
+                          </p>
+                          <br/>
+                          <p class="no-indent">
+                              <b>Long Version</b>:
+                          </p>
+                          <p class="no-indent">
+                              Peyton Manning is one of the most decorated quarterbacks of all time.
+                              Manning's career accomplishments include:
+                          </p>
+                          <br/>
+                          <ul>
+                              <li >
+                                  <p class="no-indent">
+                                      5-time NFL MVP (NFL record)
+                                  </p>
+                              </li>
+                              <li >
+                                  <p class="no-indent">
+                                      Two-time Super Bowl Champ
+                                  </p>
+                              </li>
+                              <li >
+                                  <p class="no-indent">
+                                      Most career passing yards (71,940)
+                                  </p>
+                              </li>
+                              <li >
+                                  <p class="no-indent">
+                                      Most passing yards in a single season (5,477 in 2013)
+                                  </p>
+                              </li>
+                              <li >
+                                  <p class="no-indent">
+                                      Most passing touchdowns in a single season (55 in 2013)
+                                  </p>
+                              </li>
+                          </ul>
+                          <br/>
+                          <p class="no-indent">
+                              Despite being arguably the most prolific quarterback of all time, Manning
+                              is often left out of discussions for the greatest quarterback of all time,
+                              with detractors pointing to his lack of playoff success, only having won
+                              two Super Bowl rings.
+                          </p>
+                          <p class="no-indent">
+                              In this project, we wanted to gain a clearer picture as to whether it's
+                              fair to consider Manning a regular-season quarterback beyond looking just
+                              at the number of Super Bowl rings he has.
+                          </p>
+                          <p class="no-indent">
+                              (Despite rings having almost a canonical status as a supreme measure of
+                              greatness, in a sport like football with 22 players on the field at the
+                              same time, we can do better).
+                          </p>
+                          <br/>
+                          <p class="no-indent">
+                              <b>Methodology</b>
+                          </p>
+                          <br/>
+                          <p class="no-indent">
+                              We tested the notion of Manning being a regular-season quarterback by
+                              comparing his regular season performance to his playoff performance.
+                          </p>
+                          <p class="no-indent">
+                              To begin, we used NFL Passer Rating as an objective passing metric. We also
+                              considered <a href="http://www.espn.com/nfl/qbr">ESPN's QB Rating</a>,
+                              <a href="https://www.profootballfocus.com/">
+                                  ProFootballFocus's Passing Grades
+                              </a>
+                              , and
+                              <a href="http://www.footballoutsiders.com/stats/qb">
+                                  FootballOutsiders' DYAR
+                              </a>
+                              , but the former didn't have data going back to the beginning of Manning's
+                              career, and the latter two are not publicly available.
+                          </p>
+                          <p class="no-indent">
+                              We used Python's BeautifulSoup Module to scrape Passer Rating for every NFL
+                              game Peyton Manning has started in his career (playoffs and regular season)
+                              from
+                              <a href="http://www.pro-football-reference.com/players/M/MannPe00/gamelog/">
+                                  Pro Football Reference
+                              </a>.
+                          </p>
+                          <p class="no-indent">
+                              To account for the fact that quarterbacks play, on average, tougher
+                              opponents (and defenses) in the playoffs, we only looked at regular season
+                              games against teams which made the playoffs that year. We then performed a
+                              difference in means test between Peyton Manning's passer rating against
+                              playoff teams in the regular season and Manning's passer rating in the
+                              postseason.
+                          </p>
+                          <br/>
+                          <p class="no-indent">
+                              <b>Results</b>
+                          </p>
+                          <br/>
+                          <p class="no-indent">
+                              A starting point was found by taking Manning's average passer rating in the
+                              regular season and playoffs:
+                          </p>
+                          <br/>
+                          <div >
+                              <table class="table table-bordered centered-table">
+                                  <colgroup>
+                                      <col width="144"/>
+                                      <col width="144"/>
+                                  </colgroup>
+                                  <tbody>
+                                      <tr>
+                                          <td>
+                                              <p class="no-indent">
+                                                  Reg Season
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  Playoffs
+                                              </p>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              <p class="no-indent">
+                                                  97.112
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  87.167
+                                              </p>
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                          <br/>
+                          <p class="no-indent">
+                              At first glance, the results seem to clearly support the notion that
+                              Manning cracks under the pressure of the playoffs. However, as noted above
+                              this was expected due to the superior defenses of playoff teams. Thus we
+                              ran the analysis again with a smaller pool of regular season games: those
+                              against teams that ended up making the playoffs that season.
+                          </p>
+                          <br/>
+                          <div >
+                              <table class="table table-bordered centered-table">
+                                  <colgroup>
+                                      <col width="144"/>
+                                      <col width="144"/>
+                                  </colgroup>
+                                  <tbody>
+                                      <tr>
+                                          <td>
+                                              <p class="no-indent">
+                                                  Reg Season
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  Playoffs
+                                              </p>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              <p class="no-indent">
+                                                  88.399
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  87.167
+                                              </p>
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                          <br />
+                          <p class="no-indent">
+                              After filtering for regular season games against playoff teams, there is
+                              actually only a one point difference between Manning's regular season and
+                              playoff averages, suggesting that he is not a regular season quarterback.
+                          </p>
+                          <p class="no-indent">
+                              To test whether or not this difference, though small, could be significant
+                              (i.e. still possibly indicative of a difference in performance), we
+                              performed a difference of means test with the null hypothesis that Manning
+                              does not perform significantly worse in the playoffs than in the regular
+                              season. To perform the difference in means test, we make the following
+                              assumptions:
+                          </p>
+                          <br/>
+                          <ol>
+                              <li >
+                                  <p class="no-indent">
+                                      We assume the variance of Manning's Passer Rating is constant
+                                      between playoff games and regular season games. This is not
+                                      conclusive looking at the data (Manning's variance in passer rating
+                                      is 701 and 956 for regular season and postseason games,
+                                      respectively), but the difference in means test is relatively
+                                      robust against violations of this rule so it's not a terribly
+                                      massive assumption to make.
+                                  </p>
+                              </li>
+                              <li >
+                                  <p class="no-indent">
+                                      We assume Passer Rating for each game follows a normal
+                                      distribution. This assumption appears to hold reasonably true:
+                                  </p>
+                              </li>
+                          </ol>
+                          <br/>
+                          <p class="no-indent">
+                              <img
+                                  src="../img/PFM_Passer_Rating_Normal.png"
+                                  width="347"
+                                  height="210"
+                                  alt="PFM_Passer_Rating_Normal.png"
+                              />
+                              <img
+                                  src="../img/PFM Passer Rating QQ Plot.png"
+                                  width="347"
+                                  height="210"
+                                  alt="PFM Passer Rating QQ Plot.png"
+                              />
+                          </p>
+                          <br />
+                          <ol start="3">
+                              <li >
+                                  <p class="no-indent">
+                                      We assume Manning's Passer Rating in each game is independent. For
+                                      the most part, this assumption appears to be reasonable to make,
+                                      though it is imperfect in the case where Manning plays the same
+                                      opponent twice in the regular season.
+                                  </p>
+                              </li>
+                          </ol>
+                          <br/>
+                          <p class="no-indent">
+                              This difference in means test gave p-value 0.8506, showing that the null
+                              hypothesis cannot be rejected and we do not conclude that Manning performs
+                              worse in the playoffs.
+                          </p>
+                          <br/>
+                          <p class="no-indent">
+                              <b>Comparison to Other Quarterbacks</b>
+                          </p>
+                          <br/>
+                          <p class="no-indent">
+                              After running through the analysis with Manning, we wanted to see how his
+                              performance compared to other elite quarterbacks of his era. Tom Brady,
+                              Drew Brees, Brett Favre, Aaron Rodgers, Ben Roethlisberger, and Kurt Warner
+                              were chosen to be examined, as each played or is playing at a Hall of Fame
+                              level and has a sizable postseason sample to work with. The same analysis
+                              as above was conducted with each of these quarterbacks, with results below:
+                          </p>
+                          <br/>
+                          <br/>
+                          <div >
+                              <table class="table table-bordered centered-table">
+                                  <colgroup>
+                                      <col width="*"/>
+                                      <col width="*"/>
+                                      <col width="*"/>
+                                  </colgroup>
+                                  <tbody>
+                                      <tr>
+                                          <td>
+                                              <p class="no-indent">
+                                                  Player
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  Filtered Reg. Season - Postseason Passer Rating
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  p - value
+                                              </p>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              <p class="no-indent">
+                                                  Kurt Warner
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  14.84
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  .1171
+                                              </p>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              <p class="no-indent">
+                                                  Drew Brees
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  9.83
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  .1175
+                                              </p>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              <p class="no-indent">
+                                                  Brett Favre
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  9.79
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  .1061
+                                              </p>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              <p class="no-indent">
+                                                  Peyton Manning
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  -1.23
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  .8506
+                                              </p>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              <p class="no-indent">
+                                                  Aaron Rodgers
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  -3.57
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  .6114
+                                              </p>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              <p class="no-indent">
+                                                  Ben Roethlisberger
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  -3.81
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  .5936
+                                              </p>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              <p class="no-indent">
+                                                  Tom Brady
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  -5.16
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p class="no-indent">
+                                                  .3033
+                                              </p>
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                          <br/>
+                          <br/>
+                          <p class="no-indent">
+                              As shown by the table, there is a range of performance increase/decrease in
+                              the postseason among this group of quarterbacks. However, since none of the
+                              p-values are below the 0.05 threshold we cannot conclusively say that any
+                              of the above quarterbacks performed statistically significantly
+                              better/worse in the playoffs than in the regular season.
+                          </p>
+                          <br/>
+                          <p class="no-indent">
+                              We can see that Manning is right in the middle of the pack; by our
+                              measures, some of his peers experience a greater drop off in performance
+                              than him while others manage to elevate their level of play in the crucible
+                              of the playoffs. While this analysis only addresses one of many variables,
+                              it does offer an interesting lens on the question of the greatest
+                              quarterback of the era.
+                          </p>
+                          <br/>
+                          <p class="no-indent">
+                              <b>Limitations and Conclusions</b>
+                          </p>
+                          <br/>
+                          <p class="no-indent">
+                              There were several limitations to our analysis - first, passer rating is
+                              not necessarily reflective of how well a quarterback played. Second, while
+                              most of the games in our analysis were independent to each other (or at
+                              least it doesn't seem egregious to say they're independent), there are
+                              times when Manning plays a team twice in a season, and those games are not
+                              independent. While this violates the independence assumption of the
+                              difference in means test, we understand that a perfect study in this
+                              regard is difficult to come by (since we're testing on past data). Since
+                              the independence assumptions is not violated often, we chose to move
+                              forward with our analysis and share our findings.
+                          </p>
+                          <br/>
+                          <p class="no-indent">
+                              The analysis conducted above shows that Manning does not perform
+                              significantly worse in the postseason, nor does he fall far behind the
+                              majority of his peers in his postseason / regular season passer rating
+                              differential. Thus, based solely on the results of this analysis, we cannot
+                              endorse a reputation of Regular Season Quarterback for Peyton Manning.
+                              Though he may not have the ring count of some of the other greats of the
+                              sport, there is no doubt that Manning has earned his place as one of the
+                              greatest quarterbacks the league has ever seen.
+                          </p>
+                          <br/>
+                          <p class="no-indent">
+                              We're open to suggestions and improvements to this study. Please feel free
+                          to reach out to <a href="mailto:ajay_balaji@brown.edu">ajay_balaji@brown.edu</a>,
+                          <a href="mailto:steven_liao@brown.edu">steven_liao@brown.edu</a>, or
+                              <a href="mailto:victora_chang1@brown.edu">victor_chang1@brown.edu</a>.
+                          </p>
+                          <div>
+                              <br/>
+                          </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p><a href="../index.html">&copy; BSAC 2017</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- jQuery -->
+        <script src="../vendor/jquery/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+        <script src="../js/jqBootstrapValidation.js"></script>
+        <script src="../js/contact_me.js"></script>
+
+        <script src="../js/script.js"></script>
+
+</body>
+
+</html>
