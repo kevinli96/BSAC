@@ -1,0 +1,647 @@
+<html lang = "en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>BSAC - Posts</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:900|Oleo+Script+Swash+Caps:700|Patua+One" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div class="brand">BSAC</div>
+    <div class="address-bar">Brown Sports Analytics Club</div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="index.html">BSAC</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="page-scroll">
+                        <a href="../index.html#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="../posts.html">Posts</a>
+                    </li>
+                    <li>
+                        <a href="../workshops.html">Workshops</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="../index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <div class = "container">
+
+        <div class="row" id="posts">
+            <div class="box">
+                <div class="col-lg-8 col-lg-offset-2">
+
+                    <h2 class="intro-text text-center">
+                        NFL Resource Allocation: How much are NFL Draft picks worth, in
+                        Sa­­­­­­­­­­­­­­lary Cap Space?
+                    </h2>
+                    <hr />
+                    <div id = "blog_post1">
+                        <h3 class="post-title">
+                            <i>Steven Liao, as part of a Final Project for Brown’s CS1951a Data Science Course
+                            </i>
+                        </h3><br />
+                <p class = "no-indent">
+                    In 2017, in a
+                    <a
+                        href="https://www.si.com/nfl/2017/03/09/brock-osweiler-trade-cleveland-browns-houston-texans"
+                    >
+                        ‘groundbreaking’, ‘stunning’
+                    </a>
+                    deal, the Cleveland Browns acquired the maligned Brock Osweiler from the
+                    Texans, and received a 2018 second round pick for their troubles.
+                </p>
+                <p class = "no-indent">
+                    From an asset perspective, the Browns traded $15 million in cap space (per
+                    <a href="http://www.spotrac.com/nfl/denver-broncos/brock-osweiler-9867/">
+                        Spotrac
+                    </a>
+                    ) for a player and a second round draft pick. While trading liquid assets
+                    (cap space) for draft picks is nothing new in the NBA, this was one of the
+                    first instances of it happening in the NFL. The Browns, with their new,
+                    analytics-driven braintrust, received praise for their ingenuity.
+                </p>
+                <p class = "no-indent">
+                    Yet, was the Browns trade a good one? Considering the Browns eventually cut
+                    Osweiler, the Browns essentially traded 15 million dollars for a second
+                    round pick – was this too high a price to pay?
+                </p>
+                <p class = "no-indent">
+                    What would be a fair price? One million? Five million? Is it possible to
+                    calculate a ‘fair value’, in terms of cap space, for a draft pick?
+                </p>
+                <p class = "no-indent">
+                    <h3>Project Overview</h3>
+                </p>
+                <p class = "no-indent">
+                    Back in 2005, a Canadian blogger named Kyle MacDonald took a humble red
+                    paperclip, and over a series of fourteen swaps, ended up with a two-story
+                    house.
+                </p>
+                <p class = "no-indent">
+                    An NFL General Manager plays a barterer. The General Manager takes a
+                    boatload of cash (however much the salary cap is), and must make exchanges
+                    where hopefully, each exchange increases the overall value of the assets
+                    under the team’s control.
+                </p>
+                <p class = "no-indent">
+                    Indeed, <em>value</em> is the key word – when acquiring a player, General
+                    Managers are also acquiring their contracts. <em>Value </em>is why we often
+                    see great players flipped for chump change – for instance, in 2014, when
+                    the Patriots traded Pro Bowl guard Logan Mankins for a fourth round pick
+                    and Tim Wright, a backup tight end. The biggest return the Patriots
+                    received in this trade was unspoken: the freed salary space from dumping
+                    Mankins’ big contract.
+                </p>
+                <p class = "no-indent">
+                    With this in mind, we can model the NFL has having three primary assets:
+                    cash (cap space), players, and draft picks. An NFL General Manager playing
+                    professional barterer is necessarily concerned with the following
+                    questions:
+                </p>
+                <ol>
+                    <li>How much is a given player worth in cap space?</li>
+                <li>
+                    <strong>How much is a given draft pick worth in cap space?</strong>
+                </li>
+                </ol>
+                <p class = "no-indent">
+                    The second question is of much more interest to me. Valuing draft picks
+                    feels like a much more tricky proposition than valuing players. Some draft
+                    picks make the team, others do not. Some draft picks pan out, others do
+                    not. Draft picks can’t contribute immediately – so in trading for a draft
+                    pick, you’re trading present value (and / or cap space liquidity) for a
+                    future value.
+                </p>
+                <p class = "no-indent">
+                    The inherent difficulties in valuing draft picks can make it easy for
+                    biases to impact decision-making. Ample previous analytics work on the NFL
+                    draft suggests general managers tend to over-value top draft picks, with
+                    one explanation being that general managers are tempted to play the lottery
+                    and establish a reputation as ‘geniuses’. Biases can also cause us to
+                    undervalue draft picks; how many times after a team trades away a draft
+                    pick, have you heard the justification, “the draft is nothing more than a
+                    crapshoot?”
+                </p>
+                <p class = "no-indent">
+                    So, in this project, I sought to establish an ‘objective’ (by this I mean
+                    clearly and hopefully intelligently defined, not ‘absolutely correct’ 😉)
+                    measure of a draft pick’s worth in terms of salary cap space – in other
+                    words, answer the question, “Is a second round pick worth $15 million?”
+                </p>
+                <p>
+                    <h4>Methodology</h4>
+                </p>
+                <p>
+                    The intuition behind this project is simple, breaking down into the
+                    following steps:
+                </p>
+                <ol>
+                    <li>We use historical AV data to determine how much a draft pick
+                        contributes, on average, over the first four years of the rookie contract.</li>
+                    <li>We devise a ‘fair salary’ metric which converts AV contribution to how
+                        much the player deserves to be paid. We can use this to compute a ‘fair
+                        salary’ for a given draft pick.</li>
+                    <li>We compare the draft pick’s fair salary with their actual salary (which
+                        is relatively fixed due to changes in the CBA in 2011). The difference is
+                        the <strong><em>surplus</em></strong>, which we use to value a draft pick.</li>
+                </ol>
+                <p class="no-indent">
+                    This is a good segue into the assumptions our model makes:
+                </p>
+                <ol>
+                <li><p class="no-indent">The value of a draft pick is equal to its    <strong>absolute surplus</strong>, defined as (fair salary) – (actual
+                    salary). For instance, if the first overall pick deserves a contract worth
+                    $40 million dollars over 4 years, but you're paying them $30 million, then
+                    the first overall pick's absolute surplus (value) is $10 million dollars
+                    (over 4 years).</p>
+                <p class="no-indent">
+                    An argument could be made that valuation should be instead percentage
+                    return ([fair value – actual value]/ actual value)- so in the previous
+                    example, the percentage return is 1/3. However, recall that only a small
+                    portion of a team's salary cap is spent on draft picks each year, and any
+                    money not spent on draft picks can be imagined as offering 0% return above
+                    fair value in free agency (see assumption 2 below).
+                </p>
+                <p class="no-indent">
+                    For instance, the Indianapolis Colts are currently spending roughly $16
+                    million on drafted players on rookie contracts, or about 10.3% of their
+                    total spending (and not much more if we included undrafted rookie free
+                    agents on rookie contracts).
+                </p>
+                <p class="no-indent">
+                    To put it another way, I’d rather spend $20 million on rookie contracts for
+                    $30 million in value ($10 million surplus), than spend $10 million on
+                    rookie contracts for $18 million in value ($8 million surplus) – because
+                    the unspent money in both cases will have $0 surplus!<em></em>
+                </p></li>
+                <li>
+                <p class="no-indent">Any 'purchase' via free agency returns market value. In other words,
+                    there is no surplus on free agent contracts; an important implication of
+                    this is that <strong>no team has an edge in free agency. </strong>This is
+                    based on the notion that free agency resembles an open market, so we can
+                    assume that every contract is 'fair' (no maximum contract 'caps' like in
+                    the NBA). This, of course, is not true in practice necessarily (i.e.
+                    hometown discounts, occasional bargains / fleeces) but serves well in
+                    simplifying our model.
+                </p>
+                <p class="no-indent">
+                    Another important implication of this assumption is that a draft’s value
+                    lasts only as long as the drafted players are on rookie contracts, as
+                    afterwards, the players in those draft are no longer playing for a
+                    discount. So after five years, a good or bad draft class no longer has an
+                    effect on how good a team is. One recent example where this implication
+                    appears to hold weight is the modern-day Seahawks – the Seahawks had
+                    legendary drafts from 2010-2012, and fielded great teams in 2013-2014.
+                    After the players began signing their second deals, the Seahawks have
+                    fallen off a bit (but are still quite good). This also means that in
+                    modern-era NFL, dynasties aren’t built through the draft, as the advantage
+                    of a strong draft lasts just five years at most.
+                </p>
+                </li>
+                </ol>
+                <p class="no-indent">
+                    <h4>Part One: Fair Salary Metric</h4>
+                </p>
+                <p class="no-indent">
+                    As noted in the second step of the methodology, we created a ‘fair salary’
+                    metric based on Approximate Value (AV) scores. AV is a metric developed by
+                    ​Pro Football Reference which serves as a proxy for the performance of a
+                    player over the course of a season. We use AV because it is objective,
+                    comparable across positions (which simplifies the analysis), and because it
+                    is rather well-known (it is a common proxy for player performance in other
+                    analytics projects). Read more
+                    <a href="https://www.pro-football-reference.com/blog/index37a8.html">
+                        here
+                    </a>
+                    .
+                </p>
+                <p class="no-indent">
+                    We used Python’s Beautiful Soup library to scrape AV data (from Pro
+                    Football Reference) and salary data (from Spotrac) from 1994 (beginning of
+                    salary cap era) to 2016, and stored it in a SQL database.
+                </p>
+                <p class="no-indent">
+                    We used R to process this data, and calculated the fair AV value for each
+                    player as follows, starting with the following assumptions:
+                </p>
+                <ul>
+                    <li>
+                        AV contribution is linear. I.e. a player whose AV is 8 in a given year is
+                        worth twice as much as a player whose AV is 4 in a given year.
+                    </li>
+                    <li>
+                        A player with 0 AV is worth $0
+                    </li>
+                    <li>
+                        A practice squad player’s pay is negligible
+                    </li>
+                </ul>
+                <p class="no-indent">
+                    Using these three assumptions, and inputting the salary cap for every year
+                    from 1994 to 2016 (ranging from 34.6 million in 1994 to 155.27 million in
+                    2016), we were able to calculate the fair salary for each player in that
+                    given year, using the following formula:
+                </p>
+                <ul>
+                <li>
+                    Let SC = total combined salary cap across all 32 teams (167 million times
+                    32 for 2017)
+                </li>
+                <li>
+                    Let N = total number of players who can be on an NFL roster (53 times 32
+                    for 2017)
+                </li>
+                <li>
+                    Let AVTotal = Summed AV of the top N NFL players in a given season
+                </li>
+                </ul>
+                <p class="no-indent">
+                    Then Fair Salary is p_av/AVTotal * SC
+                </p>
+                <p class="no-indent">
+                    Some of our findings included:
+                </p>
+                <ul>
+                <li>
+                    Matt Ryan, the player with the highest AV in 2016 (also the league MVP),
+                    had a fair salary of $16.13 million in 2016.
+                </li>
+                <li>
+                    The most overpaid player (using ‘cap hit’ as salary metric), in total
+                    dollars (not in percentage of salary cap) between 1994 and 2016 was Tony
+                    Romo in 2016, whose fair salary was 0, but whose cap hit was over 20
+                    million
+                </li>
+                <li>
+                    The most underpaid player (using ‘cap hit’ again as salary metric), in
+                    total dollars (not in percentage of salary cap) between 1994 and 2016 was
+                    Dak Prescott, whose fair salary was 12.3 million, and whose cap hit was
+                    546,000.
+                </li>
+                </ul>
+                <p class="no-indent">
+                    These findings are interesting, but undervalue backups - i.e. some backups
+                    have 0 AV but are worth over $0 (i.e. backup quarterbacks).
+                </p>
+                <p class="no-indent">
+                    <h4>Part Two: Draft Pick Historic Performance</h4>
+                </p>
+                <p class="no-indent">
+                    Using a merged dataset containing annual AV data for each player (scraped
+                    from Pro Football Reference) and draft position for each player (also
+                    scraped from Pro Football Reference), we calculated the average AV per year
+                    by pick number. The data includes drafted players from 1994 to 2016 (1994
+                    was the start of the salary cap era, though I suppose we could have gone
+                    back further, since we are looking purely at pick performance here).
+                </p>
+                <p class="no-indent">
+                We only looked at <strong>average AV per year </strong>over the    <strong>first four years of a players’ career</strong>, as that is the
+                    length of the rookie contract, the fifth year option for first round picks
+                    not withstanding.
+                </p>
+                <p class="no-indent">
+                    <img
+                        border="0"
+                        width="624"
+                        height="415"
+                        src="img/Average AV Per Season Over Rookie Contract.PNG"
+                    />
+                </p>
+                <p class="no-indent">
+                    We smooth our data by fitting it to a logarithmic regression. We get the
+                    following regression formula, with R^2 = 0.8676:
+                </p>
+                <p class="no-indent">
+                    AV = 7.07347e^(-0.0099652 * [pick number])
+                </p>
+                <p class="no-indent">
+                    <h4>Part Three: Calculating Fair Salary for Draft Picks</h4>
+                </p>
+                <p class="no-indent">
+                    We now have a function representing the expected AV contributions for each
+                    pick number, and want to estimate a fair salary for each pick number as a
+                    result.
+                </p>
+                <p class="no-indent">
+                    Our AV-to-salary converter (mentioned) in Part One required three
+                    parameters: SC (the total combined salary cap across all 32 teams), N (the
+                    total number of players who can be on an NFL roster), and AVTotal (the
+                    summed AV of the top N NFL players in a given season).
+                </p>
+                <p class="no-indent">
+                    The important point here is that the fair salary of a draft pick depends on
+                    the salary cap that season! And we don’t have the salary cap numbers for
+                the next four seasons. We make a few assumptions    <strong>for estimating the fair salary of a 2017 NFL Draft pick:</strong>
+                </p>
+                <ol>
+                    <li>The salary cap stays the same over the next four years – $167,000,000.
+                        So, SC = 167 million times 32.</li>
+                    <li>The NFL roster size stays at 53 and the number of teams stays at 32. So
+                        N = 53 times 32.</li>
+                    <li>The total AV in all of the next four years is approximated by the
+                        average total AV over the last five years (2012 - 2016), which comes out to
+                        6559.</li>
+                </ol>
+                <p class="no-indent">
+                    Assumptions #1 and #3 will almost certainly not be true. For assumption #1,
+                    knowing that the salary cap will likely increase, we can circle back later
+                    and note that our fair salary assumptions are probably conservative. For
+                    assumption #3, this value stays relatively constant over the years, so we
+                    are fairly confident any differences will be marginal. Our results come
+                    out…
+                </p>
+                <p class="no-indent">
+                    <img
+                        border="0"
+                        width="433"
+                        height="320"
+                        src="img/AV Fair Salary Top Ten Picks Chart.PNG"
+                    />
+                </p>
+                <p class="no-indent">
+                    <h4>Part Four: Calculating Surplus!</h4>
+                </p>
+                <p class="no-indent">
+                    Finally, the part we’ve been waiting for! We now have a fair salary for
+                    each 2017 NFL Draft pick and we have 2017 NFL rookie contract salary
+                    estimates from Spotrac (
+                    <em>
+                        Note: this project was completed in May 2017, so contracts had not yet
+                        been finalized, which was why we used estimates. The estimates ended up
+                        being VERY accurate – no surprise given the relatively ‘fixed’ NFL
+                        rookie contracts.
+                    </em>
+                    ). Our final chart is below:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Pick </strong>
+                        refers to pick number.
+                    </li>
+                    <li>
+                        <strong>expected_av </strong>
+                        is the output of the logarithmic regression function from Part Two, for
+                        the given pick number.
+                    </li>
+                    <li>
+                        <strong>fair_salary </strong>
+                        is the fair salary computed given the expected_av (see Part Three)
+                    </li>
+                    <li>
+                        <strong>estimate </strong>
+                        is Spotrac’s salary estimate (summed for all four years) for each 2017
+                        draft pick
+                    </li>
+                    <li>
+                        <strong>total_fair_salary </strong>
+                        is the fair_salary times four
+                    </li>
+                    <li>
+                        <strong>pick_worth </strong>
+                        is the surplus of the pick (over the entire rookie contract, not
+                        annua­­­­­­­­­­lly).
+                    </li>
+                </ul>
+                <p class="no-indent">
+                    <img
+                        border="0"
+                        width="624"
+                        height="239"
+                        src="img/Surplus Chart.PNG"
+                    />
+                </p>
+                <p class="no-indent">
+                    <img
+                        border="0"
+                        width="623"
+                        height="443"
+                        src="img/Pick Number vs Pick Worth.PNG"
+                    />
+                </p>
+                <p class="no-indent">
+                    <strong>Results and Discussion</strong>
+                </p>
+                <p class="no-indent">
+                    In trading for Brock Osweiler this past Spring, the Browns essentially
+                    traded $15 million dollars for a second round draft pick. According to our
+                    model, an average second round draft pick provides just ~$8 million dollars
+                    in surplus, over all four years of the career.
+                </p>
+                <p class="no-indent">
+                    Let’s go back to our bartering model. Imagine the assets of an NFL team
+                    (players, unused cap space, draft picks) as a big mountain of gold. In a
+                    fair transaction (i.e. free agency contract), an NFL team gives up a lump
+                    of gold for an equal-sized lump of gold, not increasing or decreasing their
+                    overall asset base.
+                </p>
+                <p class="no-indent">
+                    With an average second round pick, an NFL has the opportunity to hand over
+                    a lump of gold worth $5.5 million (roughly the average salary over four
+                    years for second round pick) and receive in return a lump worth $13.5
+                    million. Thus the asset base grows by $8 million. A good trade, for any
+                    barterer!
+                </p>
+                <p class="no-indent">
+                    In order to make this transaction though, the Browns gave up $15 million in
+                    assets. This means the Browns in essence removed $15 million from their
+                    asset mountain, and only received $8 million in return.
+                </p>
+                <p class="no-indent">
+                    So, does that mean the Browns made a bad trade? Not necessarily – one
+                    explanation is that the Browns wanted to give up present value (they will
+                    eat the $15 million dollars this year only, when they don’t realistically
+                    have a shot at winning the Super Bowl) for future value (the surplus is
+                    spread over the next four years). In addition, there are intangible
+                    considerations - perhaps the Browns wanted more youth in the locker room.
+                </p>
+                <p class= "no-indent">
+                    Also keep in mind, as mentioned, that we assumed the salary cap stays
+                    constant in our analysis. If the cap increases as it has been (7-8%
+                    annually over the past three years), we can roughly estimate the surplus as
+                    being between $8 and $10 million ($10 million assumes that the cap is equal
+                    to 1.08^3 all four years, so it is an upper bound).
+                </p>
+                <p class= "no-indent">
+                    Other interesting findings:
+                </p>
+                <ul>
+                    <li>Our results confirm the idea that draft picks tend to be underpaid.</li>
+                    <li>High first round picks tend to be overpaid, and under the bartering
+                    model, the top six picks in the draft, if made, actually expect to provide    <em>negative</em> surplus. In other words, our model is saying teams
+                        picking in the top six should actually pass on their pick (remember, each
+                        draft pick is actually an option)!</li>
+                    <li>The most underpaid pick (with the highest surplus) is pick number 33, at
+                        the top of the second round. As a General Manager, this also means that
+                        trading down in the first round is generally a great strategy.</li>
+                    <li>The draft is meant in some ways to instill parity in the NFL – the better
+                        the team, the worse the pick. If the NFL really wants to institute parity,
+                        it should consider reducing the salaries of high first round picks further
+                        – as of now, good teams have the advantage in the first round, as late
+                        first round picks grow the ‘gold mountain’ more than early first round
+                        picks!</li>
+                </ul>
+                <p class= "no-indent">
+                    It’s easy to fall in the trap of equating high first round picks with
+                    superstars like Khalil Mack and Aaron Donald, who massively outperform
+                    their rookie contracts. But for every one of those players, there’s a Greg
+                    Robinson or Blake Bortles, who massively underperform their contracts. For
+                    General Managers who believe that they are only capable of selecting Khalil
+                    Mack’s and Aaron Donald’s, these results may mean nil – but the data does
+                    seem to suggest on average, the high first round pick will not live up to
+                    their rookie contract.
+                </p>
+                <p class= "no-indent">
+                    These are impactful and meaningful insights, and provide promise for future work. However, we note the following limitations (which
+                    we could also address in future work):
+                </p>
+                <ul>
+                    <li>The fifth year option for first round picks is not factored into the
+                        valuation. For first round picks, teams get a ‘option’ to add an additional
+                        fifth year to the player’s contract, usually at a more expensive salary
+                        than the previous four years. For players selected in the first round of
+                        the 2014 NFL draft, 23 of the 32 fifth year options were picked up. Thus,
+                        we can expect first round picks to be worth slightly more than what our
+                        model suggests. Quantifying this would be a worthy next step.</li>
+                <li>
+                    As aforementioned, another flaw in our model is that we did not account
+                    for possible increases in salary cap. The salary cap has increased
+                    substantially over the past 23 years, and it is reasonable to expect it to
+                    continue to increase. Accounting for this would increase the ‘fair salary’
+                    for the draft picks, and further increase the ‘worth’ of each draft pick.
+                    This means that our current estimates for pick worth are almost certainly
+                    conservative.
+                </li>
+                <li>
+                    We estimated fair salary by assuming a linear relationship between AV and
+                    salary. We lacked a strong basis in making this assumption, and it’s worth
+                    testing to see if it’s real or not. A better option might just be to use
+                market data – see the part about Brian Burke’s project in the    <em>Important Notes </em>section below.
+                </li>
+                <li>
+                    Finally, it is important to note that Approximate Value is just as its
+                    name indicates, an ‘approximate’ value of a player’s contribution. Creating
+                    a better metric could be a sizeable undertaking but would potentially
+                    improve results.
+                </li>
+                </ul>
+                <p class= "no-indent">
+                    A final caveat to note is that these draft pick valuations are only valid
+                    for future, unknown draft picks. During the actual draft, these picks
+                    should be instead valued based the players available at each selection
+                    (which, of course, is not known until usually a few picks before).
+                </p>
+                <p class= "no-indent">
+                    <strong><em>Important Notes</em></strong>
+                    <em>: </em>
+                </p>
+                <p class= "no-indent">
+                    <em>1) </em>
+                    <em>
+                        Well after completing this project, I became aware of a
+                        <a
+                            href="http://www.advancedfootballanalytics.com/index.php/home/research/draft/242-the-value-of-each-draft-pick-a-re-examination-of-massey-thaler-surplus-value-under-the-new-cba"
+                        >
+                            similar project
+                        </a>
+                        completed by Brian Burke of Advanced Football Analytics in January
+                        2016. Burke’s project also uses AV as a measure of performance and
+                        salary cap ‘surplus’ as a measure of NFL Draft pick value. I borrow
+                        Burke’s ‘surplus’ term in my writeup – the concept seems useful enough
+                        to warrant a custom term. In terms of differences between my project
+                        and Burke’s, I calculate projected draft pick performance a bit
+                        differently (focusing on first four years of contract) and ‘fair
+                        salary’ differently as well (Burke used market data -what a player with
+                        a given AV is typically paid - while I calculated fair salary based on
+                        a linear model between AV and salary).
+                    </em>
+                </p>
+                <p class="no-indent">
+                    <em>2) </em>
+                    <em>
+                        I also want to give credit to Cade Massey and Richard Thaler, who as
+                        Burke mentions in his writeup, produced a landmark paper in 2005
+                        valuing NFL draft picks using a ‘surplus model’ – given that it was a
+                        ‘landmark’ paper, I assume that they were the first to use the
+                        ‘surplus’ model as relates to the NFL Draft.
+                    </em>
+                </p>
+                <p class="no-indent">
+                    <em>3) </em>
+                    <em>
+                        This was part of a group project in Brown University’s CS1951a Data
+                        Science course. My partners were Edan Eingal ’18, Isaiah Bryant ’18,
+                        and Kevin Li’ 18. This was my particular ‘part’ of the project, so the
+                        ideas, work, and writeup here are largely mine, but I must give credit
+                        to Edan for helping scrape some of the data used and managing a SQL
+                        database of all the data (he is considered a ‘SQL God’ by some). See
+                        more of our group project here:
+                    </em>
+                    <a href="https://kevinli96.github.io/NFL-Player-Valuation/index.html">
+                        https://kevinli96.github.io/NFL-Player-Valuation/index.html
+                    </a>
+                    ­­­­­­<em></em>
+                </p>
+                   </div>
+            </div>
+        </div>
+        <!-- /.container -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p><a href="../index.html">&copy; BSAC 2017</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- jQuery -->
+        <script src="../vendor/jquery/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+        <script src="../js/jqBootstrapValidation.js"></script>
+        <script src="../js/contact_me.js"></script>
+
+        <script src="../js/script.js"></script>
+</body>
+
+</html>
